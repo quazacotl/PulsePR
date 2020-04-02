@@ -1,0 +1,16 @@
+@import "base/variables";
+* {
+  font-family: "Museo Sans", sans-serif
+}
+
+@import "base/mixins";
+@import "general";
+@import 'blocks/promo';
+@import 'blocks/header';
+@import 'blocks/buttons';
+@import 'blocks/advant';
+@import 'blocks/main_header';
+@import 'blocks/consultation';
+@import 'blocks/forms';
+
+@import "base/media";
