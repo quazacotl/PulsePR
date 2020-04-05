@@ -2,9 +2,12 @@
 * {
   font-family: "Museo Sans", sans-serif
 }
-
+.container {
+  position: relative;
+  width: 930px;
+  margin: 0 auto;
+}
 @import "base/mixins";
-@import "general";
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/buttons';
@@ -12,5 +15,8 @@
 @import 'blocks/main_header';
 @import 'blocks/consultation';
 @import 'blocks/forms';
+@import 'blocks/carousel';
+@import 'blocks/catalog';
+@import 'blocks/review';
 
 @import "base/media";

@@ -32,6 +32,7 @@ gulp.task('sass', function() {
 gulp.task('watch', function () {
     gulp.watch("sass/**/*.+(scss|sass)", gulp.parallel('sass'));
     gulp.watch("./*.html").on("change", browserSync.reload);
+    gulp.watch("js/*").on("change", browserSync.reload);
 });
 
 gulp.task('default', gulp.parallel('server', 'watch', 'sass'));
