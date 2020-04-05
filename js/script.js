@@ -17,6 +17,54 @@ $(document).ready(function(){
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+    // modal
+
+    $('[data-modal=consultation]').on('click', function () {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+
+    $('.modal__close').on('click', function () {
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow')
+    });
+
+    $('.button_mini').each(function (i) {
+        $(this).on('click', function () {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        })
+    });
+
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    minlength: 2,
+                    required: true
+                },
+                phone: 'required',
+                email: {
+                    required: true,
+                    email: true
+                },
+            },
+            messages: {
+                name: {
+                    required: "Укажите имя",
+                    minlength: jQuery.validator.format("Как минимум {0} символа!")
+                },
+                phone: "Укажите номер телефона",
+                email: {
+                    required: "Укажите email",
+                    email: "Адрес должен быть формата имя@domain.com"
+                }
+            }
+        });
+    }
+
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
 });
 
 const slider = tns({
