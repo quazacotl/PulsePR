@@ -7,12 +7,13 @@
     <link rel="shortcut icon" href="img/icon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-<section class="promo">
+<section class="promo" id="up">
     <div class="container">
         <header class="header">
             <a href="#" class="header__logo">
@@ -63,7 +64,7 @@
 так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</div>
             </div>
             <div class="advant__card">
-                <img src="img/icon/heart.png" alt="heart" class="advant__icon">
+                <img src="img/icon/heart.png" alt="heart" class="advant__icon advant__icon_animated">
                 <h3 class="advant__subheader">Заботимся о здоровье</h3>
                 <div class="advant__text">Мы работаем для того,
 чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!
@@ -86,7 +87,7 @@
         <div class="consultation__descr">Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут</div>
         <form class="feed-form" id="consultation-form" action="#">
             <input name="name" type="text" placeholder="Ваше имя">
-            <input name="phone" type="phone" placeholder="Ваш телефон">
+            <input name="phone" placeholder="Ваш телефон">
             <input name="email" type="email" placeholder="Ваш E-mail">
             <button class="button button_submit">заказать консультацию</button>
         </form>
@@ -350,7 +351,7 @@
 <section class="review">
     <div class="container">
         <h2 class="main-header">отзывы клиентов</h2>
-        <div class="review__block">
+        <div class="review__block wow slideInUp" data-wow-delay="0.5s" data-wow-duration="0.7s">
             <div class="review__header">Ирина Иванченко</div>
             <div class="review__subheader">2 полумарафона</div>
             <p class="review__text">Не знала, что себе купить - обратилась к ребятам из RunSmart - подобрали пульсометр,
@@ -359,7 +360,7 @@
             <p class="review__text">Новые цели - новый гаджет!</p>
             <p class="review__text">Спасибо, RunSmart! </p>
         </div>
-        <div class="review__block">
+        <div class="review__block wow slideInUp" data-wow-delay="0.5s" data-wow-duration="1s">
             <div class="review__header">Иван Сёмочкин</div>
             <div class="review__subheader">1 полумарафон</div>
             <p class="review__text">Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал.
@@ -368,7 +369,7 @@
                 вперёд.</p>
             <p class="review__text">С ними подготовился к своему первому полумарафону! Спасибо!!!</p>
         </div>
-        <div class="review__block">
+        <div class="review__block wow slideInUp" data-wow-delay="0.5s" data-wow-duration="1.3s">
             <div class="review__header">Юлия Дашкина</div>
             <div class="review__subheader">2 полумарафона</div>
             <p class="review__text">Долго не могла начать бегать, т.к. до этого несколько раз начинала, но становилось тяжело и я бросала. От друзей услышала о RunSmart и о беге с контролем пульса и решила попробовать.</p>
@@ -395,9 +396,9 @@
         <div class="modal__subtitle">Просто заполните форму заявки</div>
         <div class="modal__descr">и мы вам перезвоним в течение 10 минут</div>
         <form class="feed-form feed-form_mt25" action="#">
-            <input name="name" required type="text" placeholder="Ваше имя">
-            <input name="phone" required type="phone" placeholder="Ваш телефон">
-            <input name="email" required type="email" placeholder="Ваш E-mail">
+            <input name="name" type="text" placeholder="Ваше имя">
+            <input name="phone" placeholder="Ваш телефон">
+            <input name="email" type="email" placeholder="Ваш E-mail">
             <button class="button button_submit">заказать консультацию</button>
         </form>
     </div>
@@ -406,9 +407,9 @@
         <div class="modal__subtitle">Ваш заказ</div>
         <div class="modal__descr">Пульслметр Polar FT1</div>
         <form class="feed-form feed-form_mt25" action="#">
-            <input name="name" required type="text" placeholder="Ваше имя">
-            <input name="phone" required type="phone" placeholder="Ваш телефон">
-            <input name="email" required type="email" placeholder="Ваш E-mail">
+            <input name="name" type="text" placeholder="Ваше имя">
+            <input name="phone" placeholder="Ваш телефон">
+            <input name="email" type="email" placeholder="Ваш E-mail">
             <button class="button button_submit">купить</button>
         </form>
     </div>
@@ -418,11 +419,14 @@
         <div class="modal__descr">Наш менеджер свяжется с вами</div>
     </div>
 </div>
-
+<a href="#up" class="pageup">
+    <img src="img/icon/upbutton.svg" alt="">
+</a>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
+<script src="js/wow.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

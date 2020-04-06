@@ -34,4 +34,12 @@
       }
     }
   }
+  &__icon {
+    &_animated {
+      animation: heartbeat 1.4s ease-out infinite;
+      &:hover {
+        animation: paused;
+      }
+    }
+  }
 }
